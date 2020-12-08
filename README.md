@@ -39,3 +39,8 @@ License
 This project is licensed under the [GNU GPLv3][1].  See `LICENSE` file for full text.
 
 [1]: https://choosealicense.com/licenses/gpl-3.0/#
+
+
+========================================
+add makefile
+执行make patch-release进行编镜像，并进行自动推代码
