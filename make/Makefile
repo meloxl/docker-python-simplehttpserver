@@ -109,8 +109,8 @@ tag: check-status
 	git add .
 	git commit -m "bumped to version $(VERSION)" ;
 	git tag $(TAG) ;
-	@ if [ -n "$(shell git remote -v)" ] ; then git push --tags ; else echo 'no remote to push tags to' ; fi
 	git push origin master
+	@ if [ -n "$(shell git remote -v)" ] ; then git push --tags ; else echo 'no remote to push tags to' ; fi
 
 check-status:
 	@. $(RELEASE_SUPPORT) ; ! hasChanges || (echo "ERROR: there are still outstanding changes" >&2 && exit 1) ;
